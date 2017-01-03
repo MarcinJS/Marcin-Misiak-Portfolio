@@ -23,7 +23,3 @@ $(document).ready(function(){
 	});
 });
 
-var fadeStart=100 // 100px scroll or less will equiv to 1 opacity
-    ,fadeUntil=200 // 200px scroll or more will equiv to 0 opacity
-    ,fading = $('#fading')
-;

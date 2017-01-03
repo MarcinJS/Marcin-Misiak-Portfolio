@@ -22,36 +22,15 @@ body {
   font-family: $paragraphs;
 }
 
-.logo {
-  text-align: center;
-  position: relative;
-  left: 0;
-  right: 0;
+a {
+  text-decoration: none !important;
+}
 
-  ul {
-    padding-left: 0px;
-    padding-top: 30px;
-  }
+/*====================================================
+JUMBOTRON
+====================================================*/
 
-    li {
-      display: inline-block;
-      padding: 0px 10px 0px 10px;
-      width: 40px;
-      height: 40px;
-      list-style: none;
-      font-size: 35px;
-    }
-      .fa {
-        color: #fff;
-        transition: .35s ease;
-        &:hover {
-          color: $blue;
-          cursor: pointer;
-        }
-      }
-  }
-
-.jumbotron {
+#jumbotron {
   height: 100vh;
   background-image: url('http://i.imgur.com/YIrBNmf.jpg');
   background-size: cover;
@@ -60,30 +39,99 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   margin-bottom: 0px;
+}
 
-  h1 {
-    color: #fff;
-    margin-top: 40vh;
+.jumbotron-header {
     text-align: center;
-    font-family: 'loveloline_bold';
-    line-height: 50px;
-    font-size: 60px;
-    letter-spacing: 8px;
-    text-shadow: (rgba(237, 77, 110, 0.9) 2px 0px 0px);
-  }
+    position: relative;
+    left: 0;
+    right: 0;
+    
+    h1 {
+        color: #fff;
+        margin-top: 40vh;
+        text-align: center;
+        font-family: 'loveloline_bold';
+        line-height: 50px;
+        font-size: 60px;
+        letter-spacing: 8px;
+        text-shadow: (rgba(237, 77, 110, 0.9) 2px 0px 0px);
+    }
+
+    p {
+      color: #fff;
+      font-size: 20px;
+    }
+    
+      a {
+        text-decoration: none;
+        margin-top: 20px;
+        padding: 0px 10px 0px 10px;
+        width: 40px;
+        height: 40px;
+        list-style: none;
+        font-size: 35px;
+      }
+      .fa {
+        padding-top: 50px;
+        color: #fff;
+        transition: .35s ease;
+        &:hover {
+            color: $blue;
+            cursor: pointer;
+        }
+    }
 }
 
-.jumbo-caption {
-  letter-spacing: 2px;
-  font-weight: 100;
-  color: #FFF;
-}
-
-.signs {
+.color-span {
   color: $blue;
 }
 
-/*MENU*/
+/*====================================================
+ANIMATED SCROLL ARROW ON THE BOTTOM OF JUMBOTRON
+====================================================*/
+
+.jumbotron-button {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+
+  p {
+    margin-bottom: 0px;
+  }
+
+    .angle {
+      font-size: 40px;
+      color: white;
+      animation: jump 1.5s infinite;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*====================================================
+MENU
+====================================================*/
 $color-main: #000000;
 $color-active: #FFF;
 $color-link: #FFF;
@@ -93,7 +141,7 @@ $button-width: 35px;
 
 .container {
 
-  a {
+  .menu-item-link {
     display: inline-block;
     position: relative;
     text-align: center;
@@ -231,7 +279,7 @@ $button-width: 35px;
       position: relative;
       opacity: 0;
 
-      a {
+      .menu-item-link {
         display: block;
         position: relative;
         color: $color-link;
@@ -271,122 +319,88 @@ $button-width: 35px;
   }
 }
 
-/*MOUSE SCROLL ARROW*/
-
-.jumbotron-button {
-  position: absolute;
-  bottom: 40px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: 16px;
-  color: #fff;
-
-  p {
-    margin-bottom: 0px;
-  }
-
-    .angle {
-      font-size: 40px;
-      color: white;
-      animation: jump 1.5s infinite;
-
-      &:hover {
-        cursor: pointer;
-        color: $blue;
-      }
-    }
-  }
-
-@keyframes jump {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/*ABOUT ME*/
+/*====================================================
+ABOUT ME SECTION
+====================================================*/
 
 #about {
   position: relative;
-  padding-top: 50px;
-  height: auto;
   background-color: #F4F3F8;
+  margin-bottom: 50px;
+  height: auto;
+  overflow: hidden;
 
   .myphoto {
     position: absolute;
-    top: 0;
+    top: 10%;
     right: 60px;
     max-height: 100%;
   }
-
-  .caption {
-    text-align: center;
-    color: $lightg;
-    font-size: 22px;
-  }
-
     h2 {
+      padding-top: 50px;
       font-family: $headings;
       text-align: center;
       font-size: 45px;
       color: #202020;
       font-weight: 100;
     }
+      .caption {
+        text-align: center;
+        color: $lightg;
+        font-size: 22px;
+      }
+        .more-about {
+          color: $blue;
+        }
 }
 
 .text-about {
-  color: $lightg;
-  padding-top: 50px;
-  font-size: 14px;
-  text-align: justify;
-  line-height: 28px;
-}
+  margin-top: 50px;
+  margin-bottom: 50px;
 
-.more-about {
-  color: $blue;
-}
-
-button {
-  padding: 50px 50px 0px 50px;
-  position: relative;
-  border: none;
-  font-size: 20px;
-  background-color: transparent;
-  &:hover:after,
-  &:focus:after,
-  &:active:after {
-    width: 50%;
-  }
-
-  &:after {
-    position: absolute;
-    content: '';
-    bottom: 0;
-    top: 110%;
-    left: 50%;
-    width: 0%;
-    transform: translateX(-50%);
-    height: 3px;
-    background: $blue;
-    transition: .35s;
+  p {
+    color: $lightg;
+    font-size: 14px;
+    text-align: justify;
+    line-height: 28px;
   }
 }
 
 .about-buttons {
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
+.about_button {
+  cursor: pointer;
+  color: $lightg;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  border: 2px solid $lightg;
+  border-radius: 15px;
+  padding: 10px;
+  background-image: linear-gradient(45deg, #e70057 50%, transparent 50%);
+  background-position: 100% 0;
+  background-size: 300%;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  &:hover {
+      background-position: 0 100%;
+      color: #fff;
+      background-color: #e70057;
+      border: 2px solid #e70057;
+  }
+  i {
+    margin-right: 5px;
+  }
+}
+
+/*====================================================
+SKILLS SECTION
+====================================================*/
+
 #skills {
-  padding-top: 50px;
 
   h3 {
     font-family: $headings;
@@ -403,6 +417,10 @@ button {
     margin-top: 60px;
   }
 
+  i {
+    margin-right: 10px;
+  }
+
   .caption {
     text-align: center;
     color: $blue;
@@ -414,11 +432,6 @@ button {
     text-align: justify;
     line-height: 28px;
   }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
 }
 
 .skill-icon {
@@ -428,14 +441,18 @@ button {
 .single-skill {
   min-height: 380px;
   margin-top: 40px;
-}
-
-svg {
-  width: 40px;
-  height: auto;
-  margin-top: 20px;
-  margin-right: 10px;
-  text-align: center;
+  
+  .single-skill-image {
+    width: 100%;
+    height: auto;
+  }
+    .svg-icon {
+      width: 40px;
+      height: auto;
+      margin-top: 20px;
+      margin-right: 10px;
+      text-align: center;
+  }
 }
 
 #skills2 {
@@ -447,6 +464,10 @@ svg {
     font-size: 30px;
     padding-bottom: 15px;
     margin-top: 60px;
+  }
+
+  i {
+    margin-right: 10px;
   }
 
   .caption {
@@ -467,96 +488,205 @@ svg {
     width: 100%;
     height: auto;
   }
+  .svg-icon {
+    width: 40px;
+    height: auto;
+    margin-top: 20px;
+    margin-right: 10px;
+    text-align: center;
+  }
 }
 
-#portfolio .portfolio-grid {
+/*====================================================
+PORTFOLIO SECTION
+====================================================*/
+.portfolio-container {
+  width: 100%;
+}
+
+#portfolio {
+  width: 100%;
+  background-color: #efefef;
+}
+
+.portfolio {
+  text-align: center;
+  position: relative;;
+}
+
+.portfolio_button {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  padding: 10px;
+  background-image: linear-gradient(45deg, #fff 50%, transparent 50%);
+  background-position: 100% 0;
+  background-size: 300%;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  &:hover {
+      background-position: 0 100%;
+      color: #e70057;
+      background-color: #fff;
+      border: 2px solid #e70057;
+  }
+}
+
+
+.portfolio-grid {
   padding: 0px;
 }
 
-#portfolio .portfolio-project-name {
+.portfolio-image {
   position: relative;
-  background-image: url('https://s16.postimg.org/5pfokew6t/GMZlk_Sr.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 480px;
-  transition: ease-in .2s;
+  max-width: 640px;
+  height: auto;
+  &:after {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:  0;
+    left:0;
+    background: rgba(237,77,110,0.8);
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  &:hover:after {
+    opacity: 1;
+  }
+    img {
+      width: 100%;
+      height: auto;
+    }
 }
 
-#portfolio .portfolio-overlay {
+.portfolio .portfolio-box {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(222, 39, 94, 0.0);
-  z-index: 1;
-  transition: ease-in .3s;
-}
-
-#portfolio .portfolio-overlay:hover {
-  background-color: rgba(222, 39, 94, 0.8);
-}
-
-#portfolio .portfolio-project {
-  z-index: 1;
-  position: absolute;
-  left: 15%;
   top: 30%;
-  max-width: 70%;
-  text-align: center;
-  color: #fff;
-  pointer-events:none;
-
-  h2 {
-    font-family: $headings;
-  }
-  p {
-    margin-top: 20px;
-  }
-  i {
-    margin-top: 20px;
-    font-size: 40px;
-  }
-}
-
-#contact .contact-form {
-  height: 80vh;
   width: 100%;
-  background-color: $dark;
+  height: auto;
+  z-index: 1;
   color: #fff;
-
-  h3 {
-    font-family: $headings;
-    text-align: center;
-    margin-top: 0px;
-    padding-top: 60px;
-    font-size: 45px;
-  }
-  p {
-    text-align: center;
-    font-size: 18px;
-  }
+  padding: 0 20px;
 }
+
+.portfolio-box h3 {
+  font-family: $headings;
+  font-size: 3rem;
+}
+
+.portfolio-box p {
+  font-size: 1.3rem;
+  padding-bottom: 30px;
+}
+
+/*====================================================
+CONTACT SECTION
+====================================================*/
+
+#contact {
+  height: 80vh;
+  background-image: url("http://i.imgur.com/AEF9KhL.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+  .contact-form {
+    padding-top: 20vh;
+    text-align: center;
+    width: 100%;
+    color: $lightg;
+  }
+
+    img {
+      width: 120px;
+      height: auto;
+    }
+
+    h3 {
+      padding-top: 40px; 
+      font-family: $headings;
+      text-align: center;
+      margin-top: 0px;
+      font-size: 45px;
+    }
+    p {
+      padding-top: 20px;
+      text-align: center;
+      font-size: 20px;
+    }
+    a {
+      color: $lightg;
+      font-family: $headings;
+      transition: .2s ease-in-out;
+      &:hover {
+        color: $blue;
+      }
+    }
+}
+
+/*====================================================
+FOOTER
+====================================================*/
 
 #footer {
-  height: 50px;
   background-color: $dark;
+
   p {
-    text-align: right;
+    padding-top: 15px;
     color: #fff;
-    margin-right: 5%;
+    text-align: right;
+  }
+
+  i {
+    padding: 15px;
+    font-size: 20px;
+    color: #fff;
+    transition: .2s ease-in-out;
+    &:hover {
+      color: $blue;
+    }
   }
 }
 
-@media screen and (max-width: 992px) {
 
+/*====================================================
+MEDIA QUERIES
+====================================================*/
+@media screen and (max-width: 1199px) {
+  .portfolio .portfolio-box {
+    top: 20%;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .portfolio .portfolio-box {
+    top: 20%;
+  }
+  #footer {
+    text-align: center;
+    p {
+      text-align: center;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
   #about .myphoto {
-      display: none;
+    display: none;
+  }
+  #footer {
+    text-align: center;
+    p {
+      text-align: center;
     }
-
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -565,6 +695,7 @@ svg {
     }
 
   #footer {
+    text-align: center;
     p {
       text-align: center;
     }
