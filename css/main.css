@@ -520,6 +520,25 @@ MEDIA QUERIES
       text-align: center; }
   .single-skill {
     min-height: 160px;
-    margin-top: 40px; } }
+    margin-top: 40px; }
+  .jumbotron-header h1 {
+    margin-top: 20vh;
+    font-size: 40px; }
+  .jumbotron-header p {
+    font-size: 18px; }
+  .text-about {
+    margin-top: 20px; }
+  #contact .contact-form {
+    padding-top: 10vh;
+    width: 100%; }
+    #contact .contact-form img {
+      width: 90px;
+      height: auto; }
+    #contact .contact-form h3 {
+      padding-top: 20px;
+      font-size: 40px; }
+    #contact .contact-form p {
+      padding-top: 20px;
+      font-size: 20px; } }
 
 /*# sourceMappingURL=main.css.map */
