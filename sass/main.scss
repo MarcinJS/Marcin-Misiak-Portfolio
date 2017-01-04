@@ -687,6 +687,42 @@ MEDIA QUERIES
       text-align: center;
     }
   }
+  .jumbotron-header {
+
+    h1 {
+      margin-top: 20vh;
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .text-about {
+    margin-top: 20px;
+  }
+
+  #contact {
+    .contact-form {
+      padding-top: 10vh;
+      width: 100%;
+
+      img {
+        width: 90px;
+        height: auto;
+      }
+
+      h3 {
+        padding-top: 20px; 
+        font-size: 40px;
+      }
+      p {
+        padding-top: 20px;
+        font-size: 20px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
