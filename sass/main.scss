@@ -232,11 +232,17 @@ $button-width: 35px;
   visibility: hidden;
   transition: opacity .35s, visibility .35s, height .35s;
   overflow: hidden;
+  z-index: 100;
+
+  .open {
+    z-index: 1
+  }
 
   &.open {
     opacity: .9;
     visibility: visible;
     height: 100%;
+    z-index: 1;
 
     li {
       animation: fadeInRight .5s ease forwards;
@@ -570,7 +576,6 @@ PORTFOLIO SECTION
   top: 30%;
   width: 100%;
   height: auto;
-  z-index: 1;
   color: #fff;
   padding: 0 20px;
 }
@@ -687,16 +692,25 @@ MEDIA QUERIES
       text-align: center;
     }
   }
+}
+
+@media screen and (max-width: 568px) {
+
   .jumbotron-header {
 
     h1 {
-      margin-top: 20vh;
+      margin-top: 10vh;
       font-size: 40px;
     }
 
     p {
       font-size: 18px;
+      margin-bottom: 0px;
     }
+  }
+
+  .jumbotron-button {
+    bottom: 10px;
   }
 
   .text-about {
@@ -705,7 +719,7 @@ MEDIA QUERIES
 
   #contact {
     .contact-form {
-      padding-top: 10vh;
+      padding-top: 5vh;
       width: 100%;
 
       img {

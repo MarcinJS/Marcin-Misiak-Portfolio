@@ -161,11 +161,15 @@ MENU
   opacity: 0;
   visibility: hidden;
   transition: opacity .35s, visibility .35s, height .35s;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 100; }
+  .overlay .open {
+    z-index: 1; }
   .overlay.open {
     opacity: .9;
     visibility: visible;
-    height: 100%; }
+    height: 100%;
+    z-index: 1; }
     .overlay.open li {
       animation: fadeInRight .5s ease forwards;
       animation-delay: .35s; }
@@ -425,7 +429,6 @@ PORTFOLIO SECTION
   top: 30%;
   width: 100%;
   height: auto;
-  z-index: 1;
   color: #fff;
   padding: 0 20px; }
 
@@ -509,16 +512,21 @@ MEDIA QUERIES
   #footer {
     text-align: center; }
     #footer p {
-      text-align: center; }
+      text-align: center; } }
+
+@media screen and (max-width: 568px) {
   .jumbotron-header h1 {
-    margin-top: 20vh;
+    margin-top: 10vh;
     font-size: 40px; }
   .jumbotron-header p {
-    font-size: 18px; }
+    font-size: 18px;
+    margin-bottom: 0px; }
+  .jumbotron-button {
+    bottom: 10px; }
   .text-about {
     margin-top: 20px; }
   #contact .contact-form {
-    padding-top: 10vh;
+    padding-top: 5vh;
     width: 100%; }
     #contact .contact-form img {
       width: 90px;
